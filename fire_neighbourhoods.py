@@ -20,9 +20,9 @@ class Fire(DynamicModel):
     
     randomMap = uniform(1)
     
-    n1 = ifthenelse(pcrand(randomMap < 0.8, distanceToFire < 11), boolean(1), boolean(0))
-    n2 = ifthenelse(pcrand(randomMap < 0.15, distanceToFire < 25), boolean(1), boolean(0))
-    n3 = ifthenelse(pcrand(randomMap < 0.005, distanceToFire < 55), boolean(1), boolean(0))
+    n1 = ifthenelse(pcrand(randomMap < 1, distanceToFire < 11), boolean(1), boolean(0))
+    n2 = ifthenelse(pcrand(randomMap < 0.4, distanceToFire < 25), boolean(1), boolean(0))
+    n3 = ifthenelse(pcrand(randomMap < 0.1, distanceToFire < 55), boolean(1), boolean(0))
 
     # neighbourBurns = pcror(n1, pcror(n2, n3))
     neighbourBurns = n1
